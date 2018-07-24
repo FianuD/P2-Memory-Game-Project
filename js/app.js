@@ -51,7 +51,7 @@ function click(card){
  * Compares the cards that have been clicked
  */
 function compare(currentCard, previousCard){
-    //compare two opened cards
+    // Compare two opened cards
     if(currentCard.innerHTML === previousCard.innerHTML){
         // Matched cards
         currentCard.classList.add("match");
@@ -66,9 +66,11 @@ function compare(currentCard, previousCard){
         setTimeout(function(){
             currentCard.classList.remove("open", "show", "disabled");
             previousCard.classList.remove("open", "show", "disabled");
-            openCards = [];
-        }, 500);
+        }, 200);
+        openCards = [];
     }
+    // Add new move
+    addMove();
 }
 
 /*
@@ -83,8 +85,36 @@ function gameComplete(){
 /*
  * Moves counter
  */
-
+const movesContainer = document.querySelector(".moves");
 let moves = 0;
+movesContainer.innerHTML = 0;
+function addMove(){
+    moves++;
+    movesContainer.innerHTML = moves;
+    // Set rating
+    rating();
+}
+
+/*
+ * Star rating system next to moves counter
+ */
+
+const starsContainer = document.querySelector(".stars");
+starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>`;
+function rating(){
+    if (moves > 12 && moves < 16){
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="far fa-star"></i></li>`;
+    } else if (moves >= 16){
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="far fa-star"></i></li>
+        <li><i class="far fa-star"></i></li>`;
+    }
+};
+
 
 /*
  * Restart the game
@@ -99,6 +129,11 @@ restartButton.addEventListener("click", function(){
 
     // Reset any related variables
     matchedCards = [];
+    moves = 0;
+    movesContainer.innerHTML = moves;
+    starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>`;
 })
 
 // Start/Initialize the game for the first time
