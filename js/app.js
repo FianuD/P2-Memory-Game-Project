@@ -2,7 +2,7 @@
  * Create a list that holds all of your cards
  */
 
- const icons = ['fa fa-diamond', 'fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-bolt', 'fa fa-cube', 'fa fa-cube', 'fa fa-leaf', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-bicycle', 'fa fa-bomb', 'fa fa-bomb'];
+const icons = ['fa fa-diamond', 'fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-bolt', 'fa fa-cube', 'fa fa-cube', 'fa fa-leaf', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-bicycle', 'fa fa-bomb', 'fa fa-bomb'];
 
 const cardsContainer = document.querySelector(".deck");
 
@@ -98,7 +98,6 @@ function addMove(){
 /*
  * Star rating system next to moves counter
  */
-
 const starsContainer = document.querySelector(".stars");
 starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
 <li><i class="fa fa-star"></i></li>
@@ -113,7 +112,7 @@ function rating(){
         <li><i class="far fa-star"></i></li>
         <li><i class="far fa-star"></i></li>`;
     }
-};
+}
 
 
 /*
@@ -134,7 +133,7 @@ restartButton.addEventListener("click", function(){
     starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
     <li><i class="fa fa-star"></i></li>
     <li><i class="fa fa-star"></i></li>`;
-})
+});
 
 // Start/Initialize the game for the first time
 init();
