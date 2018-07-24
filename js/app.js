@@ -2,62 +2,107 @@
  * Create a list that holds all of your cards
  */
 
-const icons = ['fa fa-diamond', 'fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-bolt', 'fa fa-cube', 'fa fa-cube', 'fa fa-leaf', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-bicycle', 'fa fa-bomb', 'fa fa-bomb'];
+ const icons = ['fa fa-diamond', 'fa fa-diamond', 'fa fa-paper-plane-o', 'fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-bolt', 'fa fa-cube', 'fa fa-cube', 'fa fa-leaf', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-bicycle', 'fa fa-bomb', 'fa fa-bomb'];
 
 const cardsContainer = document.querySelector(".deck");
 
-//store cards that have been opened
+//Arrays to store cards that have been opened and matched
 let openCards = [];
-//store cards that have been matched
 let matchedCards =[];
 
-// Loop through icons array and Create the cards
+/*
+ *Function to initiliaze/start the game
+ */
+function init(){
+    // Loop through icons array and Create the cards
+    for(let i = 0; i < icons.length; i++){
+        const card = document.createElement("li");
+        card.classList.add("card");
+        card.innerHTML = `<i class="${icons[i]}"></i>`;
+        cardsContainer.appendChild(card);
+        //call click function
+        click(card);
+    }
+}
 
-for(let i = 0; i < icons.length; i++){
-    const card = document.createElement("li");
-    card.classList.add("card");
-    card.innerHTML = `<i class="${icons[i]}"></i>`;
-    cardsContainer.appendChild(card);
-
+/*
+ * Click Event
+ */
+function click(card){
     //Event for when card is clicked
     card.addEventListener("click", function(){
         //We have an existing open card
         if(openCards.length === 1){
-
             const currentCard = this;
             const previousCard = openCards[0];
-            card.classList.add("open", "show");
+            card.classList.add("open", "show", "disabled");
             openCards.push(this);
-            //compare two opened cards
-            if(currentCard.innerHTML === previousCard.innerHTML){
-                // Matched cards
-                currentCard.classList.add("match");
-                previousCard.classList.add("match");
-                // Push to an array to act a completion counter
-                matchedCards.push(currentCard, previousCard);
-                openCards = [];
-                //check if game is completed
-                gameComplete();
-            } else {
-                setTimeout(function(){
-                    currentCard.classList.remove("open", "show");
-                    previousCard.classList.remove("open", "show");
-                });
-                openCards = [];
-            }
+            //invoke function to match and compare clicked cards
+            compare(currentCard, previousCard);
         } else {
         //no open cards
-            card.classList.add("open", "show");
+            card.classList.add("open", "show", "disabled");
             openCards.push(this);
         }
     });
 }
 
+/*
+ * Compares the cards that have been clicked
+ */
+function compare(currentCard, previousCard){
+    //compare two opened cards
+    if(currentCard.innerHTML === previousCard.innerHTML){
+        // Matched cards
+        currentCard.classList.add("match");
+        previousCard.classList.add("match");
+        // Push to an array to act a completion counter
+        matchedCards.push(currentCard, previousCard);
+        openCards = [];
+        //check if game is completed
+        gameComplete();
+    } else {
+        //cards flipping too fast so adding a timeout, wait 500ms
+        setTimeout(function(){
+            currentCard.classList.remove("open", "show", "disabled");
+            previousCard.classList.remove("open", "show", "disabled");
+            openCards = [];
+        }, 500);
+    }
+}
+
+/*
+ * Check if the game is over
+ */
 function gameComplete(){
     if(matchedCards.length === icons.length){
         alert("GAME OVER!");
     }
 }
+
+/*
+ * Moves counter
+ */
+
+let moves = 0;
+
+/*
+ * Restart the game
+ */
+const restartButton = document.querySelector(".restart");
+restartButton.addEventListener("click", function(){
+    // Delete all cards
+    cardsContainer.innerHTML = "";
+
+    // Call init function to create new cards
+    init();
+
+    // Reset any related variables
+    matchedCards = [];
+})
+
+// Start/Initialize the game for the first time
+init();
 
 /*
  * Display the cards on the page

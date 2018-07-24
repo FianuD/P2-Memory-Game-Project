@@ -81,6 +81,11 @@ h1 {
     font-size: 33px;
 }
 
+/* New class to stop cards matching when one is clicked twice */
+
+.deck .card.disabled {
+    pointer-events: none;
+}
 /*
  * Styles for the Score Panel
  */
