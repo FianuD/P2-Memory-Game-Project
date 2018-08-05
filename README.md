@@ -6,6 +6,7 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 
 * [Game Rules](#game-rules)
 * [How To Play](#how-to-play)
+* [Screenshot](#screenshot)
 
 ## Game Rules
 
@@ -22,4 +23,9 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 * Donwload or clone the repository on your machine.
 * Extract the .zip file.
 * Open the index.html in your browser.
-* Internet connection required to load font awesome cards.
+
+Internet connection required to load font awesome cards.
+
+## Screenshot
+
+![Screenshot of Memory Game](https://github.com/FianuD/P2-Memory-Game-Project/blob/master/img/Matching-Game.png)
