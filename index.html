@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Matching Game</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
@@ -22,18 +23,36 @@
         		<li><i class="fas fa-star"></i></li>
         	</ul>
 
-        	<span class="moves"></span> Moves
+            <span class="moves"></span> Move(s)
 
+            <div class ="timer">0 Mins 0 Secs</div>
             <div class="restart">
         		<i class="fas fa-redo"></i>
         	</div>
         </section>
 
         <ul class="deck">
-
         </ul>
-    </div>
 
+        <div id="gameOver" class="overlay">
+            <div class="popup">
+                <h2>🎉 Congratulations 🎉</h2>
+                <a class="close-icon" href=#><i class="fas fa-times-circle"></i></a>
+                <div class="message">
+                    Congratulations, You've Completed the Game!
+                </div>
+                <div class="stats">
+                    <p>You made <span id="finalMove"> </span> moves</p>
+                    <p>In <span id="totalTime"> </span> </p>
+                    <p>Rating: <span id="starRating"></span></p>
+                </div>
+                <button class="play-again">
+                    Play Again 🎲
+                </button>
+            </div>
+        </div>
+
+    </div>
     <script src="js/app.js"></script>
 </body>
 </html>
