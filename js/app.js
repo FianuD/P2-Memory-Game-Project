@@ -212,7 +212,7 @@ function rating(){
 }
 
 /*
- * Restart the game
+ * Restart button
  */
 const restartButton = document.querySelector(".restart");
 restartButton.addEventListener("click", function(){
