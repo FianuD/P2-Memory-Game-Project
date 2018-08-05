@@ -27,9 +27,10 @@ let matchedCards = [];
 
 // Container for star rating system
 const starsContainer = document.querySelector(".stars");
-starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
-<li><i class="fa fa-star"></i></li>
-<li><i class="fa fa-star"></i></li>`;
+// Rating stars
+starsContainer.innerHTML = `<li><i class="fas fa-star"></i></li>
+<li><i class="fas fa-star"></i></li>
+<li><i class="fas fa-star"></i></li>`;
 
 // Modal on game completion containers
 let modal = document.getElementById("gameOver");
