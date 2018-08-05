@@ -4,8 +4,8 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 
 ## Table of Contents
 
-* [Game Rules](#Game Rules)
-* [How To Play](#Hot To Play)
+* [Game Rules](#Game-Rules)
+* [How To Play](#Hot-To-Play)
 
 ## Game Rules
 
