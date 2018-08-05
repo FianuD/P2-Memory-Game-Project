@@ -7,6 +7,7 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 * [Game Rules](#game-rules)
 * [How To Play](#how-to-play)
 * [Screenshot](#screenshot)
+* [Summary Of How Game Was Built](summary-of-how-game-was-built)
 
 ## Game Rules
 
@@ -29,3 +30,18 @@ Note: Internet connection required to load font awesome cards.
 ## Screenshot
 
 ![Screenshot of Memory Game](https://github.com/FianuD/P2-Memory-Game-Project/blob/master/img/Matching-Game.png)
+
+## Summary Of How Game Was Built
+
+Alterations were made to the HTML and CSS.
+
+* Classes and IDs as targets for both CSS and JavaScript.
+* Added modals
+* Media query added to CSS for responsiveness.
+
+The Dom was manipulated with vanilla JavaScript.
+
+* Created a deck of cards that shuffles when game is reset.
+* Added a counter to keep track of number of moves made.
+* Added a timer to show length of playtime in minutes and seconds.
+* Created a pop-up modal for when player completes the game.
