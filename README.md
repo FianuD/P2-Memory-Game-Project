@@ -4,8 +4,8 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 
 ## Table of Contents
 
-* [Game Rules](#Game-Rules)
-* [How To Play](#Hot-To-Play)
+* [Game Rules](#game-rules)
+* [How To Play](#how-to-play)
 
 ## Game Rules
 
@@ -17,7 +17,7 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 * Moves 25 or higher are 1 Gold Star.
 * The game can be restarted by hitting the restart button.
 
-## Hot To Play
+## How To Play
 
 * Donwload or clone the repository on your machine.
 * Extract the .zip file.
