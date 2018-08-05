@@ -16,10 +16,13 @@ starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
 
 // Modal on game completion containers
 let modal = document.getElementById("gameOver");
+
 // Stars list
 let starsList = document.querySelectorAll(".star li");
+
 // Close icon in modal
 let closeIcon = document.querySelector(".close-icon");
+
 // Play again icon in modal
 const playAgain = document.querySelector(".play-again");
 
