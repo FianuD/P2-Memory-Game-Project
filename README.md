@@ -7,7 +7,7 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 * [Game Rules](#game-rules)
 * [How To Play](#how-to-play)
 * [Screenshot](#screenshot)
-* [Summary Of How Game Was Built](summary-of-how-game-was-built)
+* [Summary Of How Game Was Built](#summary-of-how-game-was-built)
 
 ## Game Rules
 
