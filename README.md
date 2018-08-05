@@ -1,6 +1,7 @@
 # Memory Game Project
 
 Classic Memory Game: The object of the game is to find the matching pairs of the hidden cards.
+
 Made as part of Udacity's Front-End Web Development Nanodegree.
 Uses starter code [provided by Udacity](https://github.com/udacity/fend-project-memory-game).
 
