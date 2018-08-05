@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/oriental.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -30,7 +30,7 @@ body {
 
 h1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 /*
@@ -110,4 +110,128 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+.timer {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.fa-star {
+    color: #ffd700;
+}
+
+/*
+ * Styles for congratulations modal
+ */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.6);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    transition: all 4s ease-in-out;
+}
+
+.popup h2 {
+    color: #02b3e4;
+    text-align: center;
+}
+
+.popup .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 200ms;
+    color: #02b3e4;
+    font-size: 2em;
+}
+
+.popup .close-icon:hover {
+    color: #02ccba;
+}
+
+.popup .message,
+.popup .stats {
+    max-height: 30%;
+    overflow: auto;
+    text-align: center;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+#starRating li {
+    display: inline-block;
+}
+
+.play-again {
+    background-color: #02b3e4;
+    padding: 0.625rem;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: all 200ms;
+}
+
+.play-again:hover {
+    background-color: #02ccba;
+}
+
+/*
+ * Media queries for responsive optimisations
+ */
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-weight: 300;
+    }
+
+    .score-panel {
+        width: 90%;
+    }
+
+    .deck {
+        padding: 15px;
+        width: 95%;
+        min-height: 100vw;
+    }
+
+    .deck .card {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .popup h2 {
+        text-align: left;
+    }
+
+    .popup .close-icon {
+        font-size: 1.5em;
+        top: 5px;
+        right: 5px;
+    }
 }
