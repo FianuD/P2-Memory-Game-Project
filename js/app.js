@@ -200,12 +200,12 @@ function startTimer(){
  * Star rating system next to moves counter
  */
 function rating(){
-    if (moves > 12 && moves < 16){
-        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
-        <li><i class="fa fa-star"></i></li>
+    if (moves > 16 && moves < 25){
+        starsContainer.innerHTML = `<li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
         <li><i class="far fa-star"></i></li>`;
-    } else if (moves >= 16){
-        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+    } else if (moves >= 25){
+        starsContainer.innerHTML = `<li><i class="fas fa-star"></i></li>
         <li><i class="far fa-star"></i></li>
         <li><i class="far fa-star"></i></li>`;
     }
