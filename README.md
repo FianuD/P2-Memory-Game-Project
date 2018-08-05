@@ -20,11 +20,11 @@ Classic Memory Game: The object of the game is to find the matching pairs of the
 
 ## How To Play
 
-* Donwload or clone the repository on your machine.
+* Download or clone the repository on your machine.
 * Extract the .zip file.
 * Open the index.html in your browser.
 
-Internet connection required to load font awesome cards.
+Note: Internet connection required to load font awesome cards.
 
 ## Screenshot
 
