@@ -109,6 +109,7 @@ function resetGameState() {
   init();
   // Reset any related variables
   matchedCards = [];
+  openCards = [];
   moves = 0;
   movesContainer.innerHTML = moves;
   starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
